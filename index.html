@@ -72,15 +72,10 @@
             padding: 20px;
             backdrop-filter: blur(10px);
             transition: all 0.3s ease;
-            animation: fadeInUp 0.6s ease-out;
             display: flex;
             flex-direction: column;
             text-align: center;
         }
-
-        .hero-card:nth-child(1) { animation-delay: 0.2s; }
-        .hero-card:nth-child(2) { animation-delay: 0.4s; }
-        .hero-card:nth-child(3) { animation-delay: 0.6s; }
 
         .hero-card:hover {
             transform: translateY(-5px);
@@ -518,19 +513,19 @@
                 <p>Automate Discord role management with precision.</p>
                 
                 <div class="hero-cards">
-                    <div class="hero-card">
+                    <div class="hero-card fade-in">
                         <div class="hero-card-icon">🚀</div>
                         <h3>Add to Server</h3>
                         <p>Get started in seconds with our bot</p>
                         <a href="https://discord.com/oauth2/authorize?client_id=1352791729698377858" target="_blank" class="hero-card-link">Invite Now</a>
                     </div>
-                    <div class="hero-card">
+                    <div class="hero-card fade-in">
                         <div class="hero-card-icon">💬</div>
                         <h3>Support Server</h3>
                         <p>Join our community for help & updates</p>
                         <a href="https://discord.gg/Wc3tTz5UzW" target="_blank" class="hero-card-link">Join Discord</a>
                     </div>
-                    <div class="hero-card">
+                    <div class="hero-card fade-in">
                         <div class="hero-card-icon">📖</div>
                         <h3>Get Started</h3>
                         <p>Learn how to use all commands</p>
@@ -601,17 +596,17 @@
             <div class="stats-grid">
                 <div class="stat-item fade-in">
                     <span class="stat-number">10</span>
-                    <div class="stat-label">Max Auto Roles</div>
+                    <div class="stat-label">Auto Roles</div>
                 </div>
                 
                 <div class="stat-item fade-in">
                     <span class="stat-number">50</span>
-                    <div class="stat-label">Max Reaction Roles</div>
+                    <div class="stat-label">Reaction Roles</div>
                 </div>
                 
                 <div class="stat-item fade-in">
                     <span class="stat-number">10</span>
-                    <div class="stat-label">Max Sticky Roles</div>
+                    <div class="stat-label">Sticky Roles</div>
                 </div>
                 
                 <div class="stat-item fade-in">
@@ -627,7 +622,9 @@
             <div class="footer-content fade-in">
                 <p>Roles - Simplifying Discord role management.</p>
                 <p style="margin-top: 15px; font-size: 0.9rem; opacity: 0.6;">
-                    <a href="legal/" style="color: #6dd5ed; text-decoration: none; transition: color 0.3s ease;">Terms of Service & Privacy Policy</a>
+                    <a href="terms/" style="color: #6dd5ed; text-decoration: none; transition: color 0.3s ease;">Terms of Service</a>
+                    <span style="margin: 0 10px; opacity: 0.4;">|</span>
+                    <a href="privacy/" style="color: #6dd5ed; text-decoration: none; transition: color 0.3s ease;">Privacy Policy</a>
                 </p>
             </div>
         </div>
@@ -636,21 +633,28 @@
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             const observerOptions = {
-                threshold: 0.1,
-                rootMargin: '0px 0px -50px 0px'
+                threshold: 0.2,
+                rootMargin: '0px 0px -100px 0px'
             };
 
             const observer = new IntersectionObserver(function(entries) {
                 entries.forEach(function(entry) {
                     if (entry.isIntersecting) {
                         entry.target.classList.add('visible');
+                        observer.unobserve(entry.target);
                     }
                 });
             }, observerOptions);
 
             const fadeElements = document.querySelectorAll('.fade-in');
+            const heroCards = document.querySelectorAll('.hero-card');
+            
             fadeElements.forEach(function(element) {
                 observer.observe(element);
+            });
+            
+            heroCards.forEach(function(card, index) {
+                card.style.transitionDelay = (index * 0.2) + 's';
             });
 
             document.querySelectorAll('a[href^="#"]').forEach(function(anchor) {

@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - Roles Discord Bot</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #fff;
+            overflow-x: hidden;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        header {
+            padding: 60px 0 40px;
+            text-align: center;
+        }
+
+        .page-title {
+            font-size: clamp(2.5rem, 6vw, 4rem);
+            font-weight: 700;
+            margin-bottom: 1rem;
+            background: linear-gradient(45deg, #fff, #f0f0f0);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .page-subtitle {
+            font-size: clamp(1rem, 2.5vw, 1.2rem);
+            opacity: 0.8;
+            max-width: 500px;
+            margin: 0 auto;
+            line-height: 1.5;
+        }
+
+        .legal-section {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            padding: 40px;
+            margin-bottom: 40px;
+            backdrop-filter: blur(10px);
+            animation: fadeInUp 0.6s ease-out;
+        }
+
+        .legal-section h2 {
+            font-size: 2rem;
+            margin-bottom: 30px;
+            color: #6dd5ed;
+            font-weight: 700;
+        }
+
+        .legal-section h3 {
+            font-size: 1.3rem;
+            margin: 25px 0 15px;
+            font-weight: 600;
+            color: #fff;
+        }
+
+        .legal-section p {
+            line-height: 1.7;
+            margin-bottom: 15px;
+            opacity: 0.9;
+        }
+
+        .legal-section ul {
+            margin: 15px 0;
+            padding-left: 20px;
+        }
+
+        .legal-section li {
+            line-height: 1.7;
+            margin-bottom: 12px;
+            opacity: 0.9;
+        }
+
+        .legal-section a {
+            color: #6dd5ed;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .legal-section a:hover {
+            color: #5bc5db;
+            text-decoration: underline;
+        }
+
+        footer {
+            padding: 60px 0;
+            text-align: center;
+            background: rgba(0, 0, 0, 0.2);
+            backdrop-filter: blur(20px);
+            margin-top: 60px;
+        }
+
+        .footer-content {
+            opacity: 0.8;
+        }
+
+        .floating-elements {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        .floating-element {
+            position: absolute;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            animation: float 6s ease-in-out infinite;
+        }
+
+        .floating-element:nth-child(1) {
+            width: 80px;
+            height: 80px;
+            top: 20%;
+            left: 10%;
+            animation-delay: 0s;
+        }
+
+        .floating-element:nth-child(2) {
+            width: 60px;
+            height: 60px;
+            top: 60%;
+            right: 10%;
+            animation-delay: 2s;
+        }
+
+        .floating-element:nth-child(3) {
+            width: 40px;
+            height: 40px;
+            top: 80%;
+            left: 20%;
+            animation-delay: 4s;
+        }
+
+        .ambient-sparkle {
+            position: absolute;
+            width: 2px;
+            height: 2px;
+            background: rgba(255, 255, 255, 0.6);
+            border-radius: 50%;
+            animation: ambientSparkle 3s ease-in-out infinite;
+        }
+
+        .ambient-sparkle::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 6px;
+            height: 0.5px;
+            background: rgba(255, 255, 255, 0.4);
+            transform: translate(-50%, -50%) rotate(45deg);
+        }
+
+        .ambient-sparkle::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 6px;
+            height: 0.5px;
+            background: rgba(255, 255, 255, 0.4);
+            transform: translate(-50%, -50%) rotate(-45deg);
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0px);
+                opacity: 0.5;
+            }
+            50% {
+                transform: translateY(-20px);
+                opacity: 0.8;
+            }
+        }
+
+        @keyframes ambientSparkle {
+            0%, 100% {
+                opacity: 0;
+                transform: scale(0);
+            }
+            50% {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .legal-section {
+                padding: 30px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="floating-elements">
+        <div class="floating-element"></div>
+        <div class="floating-element"></div>
+        <div class="floating-element"></div>
+    </div>
+
+    <header>
+        <div class="container">
+            <h1 class="page-title">Privacy Policy</h1>
+            <p class="page-subtitle">How we handle your data when using Roles Bot</p>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <section class="legal-section">
+                <h2>Privacy Policy</h2>
+
+                <h3>Data Collection</h3>
+                <ul>
+                    <li>The bots may store certain server-level data necessary to operate their features effectively.</li>
+                    <li>This includes configuration settings and other information required to maintain functionality.</li>
+                    <li>We do not collect or store personal user data beyond what is essential for the bot's operation within Discord servers.</li>
+                </ul>
+
+                <h3>Data Retention</h3>
+                <ul>
+                    <li>Data is retained only while the bot remains active in the server.</li>
+                    <li>If the bot is removed, all associated data is automatically and permanently deleted.</li>
+                    <li>We do not retain backups or historical data from servers once the bot has been uninstalled.</li>
+                </ul>
+
+                <h3>Data Deletion Requests</h3>
+                <ul>
+                    <li>Server owners and administrators may request deletion of stored data at any time.</li>
+                    <li>Requests will be handled within a reasonable timeframe and confirmed upon completion.</li>
+                </ul>
+
+                <h3>Use of Data</h3>
+                <ul>
+                    <li>Stored data is used exclusively to deliver the core functionality of the bots and ensure consistent performance.</li>
+                    <li>The data is never used for analytics, profiling, or shared with third parties.</li>
+                    <li>No form of data monetization or external processing is performed.</li>
+                </ul>
+
+                <h3>Platform and Security</h3>
+                <ul>
+                    <li>The bots operate fully within the Discord platform and depend on Discord's API infrastructure.</li>
+                    <li>All usage is subject to <a href="https://discord.com/terms" target="_blank">Discord's Terms of Service</a> and <a href="https://discord.com/privacy" target="_blank">Privacy Policy</a>.</li>
+                    <li>Internal measures are in place to prevent unauthorized access and ensure the integrity and confidentiality of all stored information.</li>
+                </ul>
+
+                <h3>Acceptance & Changes</h3>
+                <ul>
+                    <li>By using the Roles Bot, you agree to the terms outlined in this Privacy Policy. This policy describes how data is handled when you use our services.</li>
+                    <li>This Privacy Policy may be updated at any time. Continued use of the bots following any changes constitutes acceptance of the revised policy.</li>
+                </ul>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <p>Roles - Simplifying Discord role management.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            function createAmbientSparkles() {
+                for (let i = 0; i < 4; i++) {
+                    setTimeout(function() {
+                        const sparkle = document.createElement('div');
+                        sparkle.className = 'ambient-sparkle';
+                        sparkle.style.left = Math.random() * window.innerWidth + 'px';
+                        sparkle.style.top = Math.random() * window.innerHeight + 'px';
+                        sparkle.style.animationDelay = Math.random() * 3 + 's';
+                        
+                        document.querySelector('.floating-elements').appendChild(sparkle);
+                        
+                        setTimeout(function() {
+                            sparkle.remove();
+                        }, 6000);
+                    }, i * 150);
+                }
+            }
+
+            setInterval(createAmbientSparkles, 350);
+
+            for (let i = 0; i < 20; i++) {
+                setTimeout(createAmbientSparkles, i * 120);
+            }
+        });
+    </script>
+</body>
+</html>

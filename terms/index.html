@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Legal - Roles Discord Bot</title>
+    <title>Terms of Service - Roles Discord Bot</title>
     <style>
         * {
             margin: 0;
@@ -28,30 +28,6 @@
         header {
             padding: 60px 0 40px;
             text-align: center;
-        }
-
-        .back-button {
-            position: fixed;
-            top: 30px;
-            left: 30px;
-            padding: 12px 24px;
-            background: rgba(255, 255, 255, 0.1);
-            border: 2px solid rgba(255, 255, 255, 0.2);
-            border-radius: 25px;
-            color: #fff;
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 0.9rem;
-            transition: all 0.3s ease;
-            backdrop-filter: blur(10px);
-            z-index: 100;
-            white-space: nowrap;
-        }
-
-        .back-button:hover {
-            background: rgba(255, 255, 255, 0.2);
-            border-color: rgba(255, 255, 255, 0.4);
-            transform: translateY(-2px);
         }
 
         .page-title {
@@ -246,13 +222,6 @@
             .legal-section {
                 padding: 30px 20px;
             }
-            
-            .back-button {
-                top: 20px;
-                left: 20px;
-                padding: 10px 20px;
-                font-size: 0.85rem;
-            }
         }
     </style>
 </head>
@@ -263,12 +232,10 @@
         <div class="floating-element"></div>
     </div>
 
-    <a href="../" class="back-button">Back to Home</a>
-
     <header>
         <div class="container">
-            <h1 class="page-title">Legal Documents</h1>
-            <p class="page-subtitle">Terms of Service and Privacy Policy for Roles Bot</p>
+            <h1 class="page-title">Terms of Service</h1>
+            <p class="page-subtitle">Legal terms and conditions for using Roles Bot</p>
         </div>
     </header>
 
@@ -310,50 +277,6 @@
                     <li>These Terms of Service may be updated at any time. Continued use of the bots constitutes acceptance of any changes.</li>
                 </ul>
             </section>
-
-            <section class="legal-section">
-                <h2>Privacy Policy</h2>
-
-                <h3>Data Collection</h3>
-                <ul>
-                    <li>The bots may store certain server-level data necessary to operate their features effectively.</li>
-                    <li>This includes configuration settings and other information required to maintain functionality.</li>
-                    <li>We do not collect or store personal user data beyond what is essential for the bot's operation within Discord servers.</li>
-                </ul>
-
-                <h3>Data Retention</h3>
-                <ul>
-                    <li>Data is retained only while the bot remains active in the server.</li>
-                    <li>If the bot is removed, all associated data is automatically and permanently deleted.</li>
-                    <li>We do not retain backups or historical data from servers once the bot has been uninstalled.</li>
-                </ul>
-
-                <h3>Data Deletion Requests</h3>
-                <ul>
-                    <li>Server owners and administrators may request deletion of stored data at any time.</li>
-                    <li>Requests will be handled within a reasonable timeframe and confirmed upon completion.</li>
-                </ul>
-
-                <h3>Use of Data</h3>
-                <ul>
-                    <li>Stored data is used exclusively to deliver the core functionality of the bots and ensure consistent performance.</li>
-                    <li>The data is never used for analytics, profiling, or shared with third parties.</li>
-                    <li>No form of data monetization or external processing is performed.</li>
-                </ul>
-
-                <h3>Platform and Security</h3>
-                <ul>
-                    <li>The bots operate fully within the Discord platform and depend on Discord's API infrastructure.</li>
-                    <li>All usage is subject to <a href="https://discord.com/terms" target="_blank">Discord's Terms of Service</a> and <a href="https://discord.com/privacy" target="_blank">Privacy Policy</a>.</li>
-                    <li>Internal measures are in place to prevent unauthorized access and ensure the integrity and confidentiality of all stored information.</li>
-                </ul>
-
-                <h3>Acceptance & Changes</h3>
-                <ul>
-                    <li>By using the Roles Bot, you agree to the terms outlined in this Privacy Policy. This policy describes how data is handled when you use our services.</li>
-                    <li>This Privacy Policy may be updated at any time. Continued use of the bots following any changes constitutes acceptance of the revised policy.</li>
-                </ul>
-            </section>
         </div>
     </main>
 
@@ -390,11 +313,6 @@
             for (let i = 0; i < 20; i++) {
                 setTimeout(createAmbientSparkles, i * 120);
             }
-
-            const sections = document.querySelectorAll('.legal-section');
-            sections.forEach((section, index) => {
-                section.style.animationDelay = (index * 0.2) + 's';
-            });
         });
     </script>
 </body>
