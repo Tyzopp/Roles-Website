@@ -13,216 +13,175 @@
         }
 
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: #fff;
-            overflow-x: hidden;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            background-color: #0f131b;
+            color: #ffffff;
+            line-height: 1.6;
             min-height: 100vh;
+            display: flex;
+            flex-direction: column;
         }
 
         .container {
-            max-width: 900px;
+            max-width: 800px;
             margin: 0 auto;
-            padding: 0 20px;
+            padding: 0 24px;
         }
 
         header {
-            padding: 60px 0 40px;
+            padding: 80px 0 40px;
             text-align: center;
         }
 
         .page-title {
-            font-size: clamp(2.5rem, 6vw, 4rem);
+            font-size: 48px;
             font-weight: 700;
-            margin-bottom: 1rem;
-            background: linear-gradient(45deg, #fff, #f0f0f0);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
+            color: #ffffff;
+            margin-bottom: 16px;
+            letter-spacing: -0.02em;
         }
 
         .page-subtitle {
-            font-size: clamp(1rem, 2.5vw, 1.2rem);
-            opacity: 0.8;
-            max-width: 500px;
-            margin: 0 auto;
-            line-height: 1.5;
+            font-size: 18px;
+            color: #a1a1aa;
+            margin-bottom: 32px;
+        }
+
+        .back-link {
+            display: inline-block;
+            color: #a1a1aa;
+            text-decoration: none;
+            font-size: 14px;
+            margin-bottom: 24px;
+            transition: color 0.2s ease;
+            padding: 8px 16px;
+            border: 1px solid #27272a;
+            border-radius: 6px;
+            background-color: #18181b;
+        }
+
+        .back-link:hover {
+            color: #ffffff;
+            border-color: #3f3f46;
+        }
+
+        main {
+            flex: 1;
+            padding-bottom: 60px;
         }
 
         .legal-section {
-            background: rgba(255, 255, 255, 0.05);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            border-radius: 20px;
+            background-color: #0f0f0f;
+            border: 1px solid #18181b;
+            border-radius: 12px;
             padding: 40px;
-            margin-bottom: 40px;
-            backdrop-filter: blur(10px);
-            animation: fadeInUp 0.6s ease-out;
-        }
-
-        .legal-section h2 {
-            font-size: 2rem;
-            margin-bottom: 30px;
-            color: #6dd5ed;
-            font-weight: 700;
+            margin: 0 0 40px 0;
         }
 
         .legal-section h3 {
-            font-size: 1.3rem;
-            margin: 25px 0 15px;
+            font-size: 20px;
             font-weight: 600;
-            color: #fff;
+            color: #ffffff;
+            margin: 32px 0 16px 0;
+        }
+
+        .legal-section h3:first-child {
+            margin-top: 0;
         }
 
         .legal-section p {
-            line-height: 1.7;
-            margin-bottom: 15px;
-            opacity: 0.9;
+            color: #d1d5db;
+            margin-bottom: 16px;
+            font-size: 16px;
         }
 
         .legal-section ul {
-            margin: 15px 0;
+            margin: 16px 0 24px 0;
             padding-left: 20px;
         }
 
         .legal-section li {
-            line-height: 1.7;
+            color: #d1d5db;
             margin-bottom: 12px;
-            opacity: 0.9;
+            font-size: 16px;
         }
 
         .legal-section a {
-            color: #6dd5ed;
+            color: #ffffff;
             text-decoration: none;
-            transition: color 0.3s ease;
+            transition: opacity 0.2s ease;
         }
 
         .legal-section a:hover {
-            color: #5bc5db;
-            text-decoration: underline;
+            opacity: 0.8;
         }
 
-        .floating-elements {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            overflow: hidden;
-            pointer-events: none;
-            z-index: 1;
+        footer {
+            padding: 40px 0;
+            border-top: 1px solid #18181b;
         }
 
-        .floating-element {
-            position: absolute;
-            background: rgba(255, 255, 255, 0.1);
-            border-radius: 50%;
-            animation: float 6s ease-in-out infinite;
+        .footer-content {
+            text-align: center;
         }
 
-        .floating-element:nth-child(1) {
-            width: 80px;
-            height: 80px;
-            top: 20%;
-            left: 10%;
-            animation-delay: 0s;
+        .footer-links {
+            margin-bottom: 16px;
         }
 
-        .floating-element:nth-child(2) {
-            width: 60px;
-            height: 60px;
-            top: 60%;
-            right: 10%;
-            animation-delay: 2s;
+        .footer-links a {
+            color: #a1a1aa;
+            text-decoration: none;
+            font-size: 14px;
+            margin: 0 16px;
+            transition: color 0.2s ease;
         }
 
-        .floating-element:nth-child(3) {
-            width: 40px;
-            height: 40px;
-            top: 80%;
-            left: 20%;
-            animation-delay: 4s;
+        .footer-links a:hover {
+            color: #ffffff;
         }
 
-        .ambient-sparkle {
-            position: absolute;
-            width: 2px;
-            height: 2px;
-            background: rgba(255, 255, 255, 0.6);
-            border-radius: 50%;
-            animation: ambientSparkle 3s ease-in-out infinite;
-        }
-
-        .ambient-sparkle::before {
-            content: '';
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            width: 6px;
-            height: 0.5px;
-            background: rgba(255, 255, 255, 0.4);
-            transform: translate(-50%, -50%) rotate(45deg);
-        }
-
-        .ambient-sparkle::after {
-            content: '';
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            width: 6px;
-            height: 0.5px;
-            background: rgba(255, 255, 255, 0.4);
-            transform: translate(-50%, -50%) rotate(-45deg);
-        }
-
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        @keyframes float {
-            0%, 100% {
-                transform: translateY(0px);
-                opacity: 0.5;
-            }
-            50% {
-                transform: translateY(-20px);
-                opacity: 0.8;
-            }
-        }
-
-        @keyframes ambientSparkle {
-            0%, 100% {
-                opacity: 0;
-                transform: scale(0);
-            }
-            50% {
-                opacity: 1;
-                transform: scale(1);
-            }
+        .footer-text {
+            font-size: 14px;
+            color: #71717a;
         }
 
         @media (max-width: 768px) {
+            .container {
+                padding: 0 20px;
+            }
+
+            header {
+                padding: 60px 0 30px;
+            }
+
+            .page-title {
+                font-size: 36px;
+            }
+
+            .page-subtitle {
+                font-size: 16px;
+            }
+
             .legal-section {
-                padding: 30px 20px;
+                padding: 32px 24px;
+            }
+
+            .legal-section h3 {
+                font-size: 18px;
+            }
+
+            .footer-links a {
+                display: block;
+                margin: 8px 0;
             }
         }
     </style>
 </head>
 <body>
-    <div class="floating-elements">
-        <div class="floating-element"></div>
-        <div class="floating-element"></div>
-        <div class="floating-element"></div>
-    </div>
-
     <header>
         <div class="container">
+            <a href="../" class="back-link">← Back to Home</a>
             <h1 class="page-title">Terms of Service</h1>
             <p class="page-subtitle">Legal terms and conditions for using Roles Bot</p>
         </div>
@@ -231,8 +190,6 @@
     <main>
         <div class="container">
             <section class="legal-section">
-                <h2>Terms of Service</h2>
-
                 <h3>Usage</h3>
                 <ul>
                     <li>You must have appropriate permissions to invite and configure the bot in your server.</li>
@@ -269,32 +226,16 @@
         </div>
     </main>
 
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            function createAmbientSparkles() {
-                for (let i = 0; i < 4; i++) {
-                    setTimeout(function() {
-                        const sparkle = document.createElement('div');
-                        sparkle.className = 'ambient-sparkle';
-                        sparkle.style.left = Math.random() * window.innerWidth + 'px';
-                        sparkle.style.top = Math.random() * window.innerHeight + 'px';
-                        sparkle.style.animationDelay = Math.random() * 3 + 's';
-                        
-                        document.querySelector('.floating-elements').appendChild(sparkle);
-                        
-                        setTimeout(function() {
-                            sparkle.remove();
-                        }, 6000);
-                    }, i * 150);
-                }
-            }
-
-            setInterval(createAmbientSparkles, 350);
-
-            for (let i = 0; i < 20; i++) {
-                setTimeout(createAmbientSparkles, i * 120);
-            }
-        });
-    </script>
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-links">
+                    <a href="../terms/">Terms of Service</a>
+                    <a href="../privacy/">Privacy Policy</a>
+                </div>
+                <p class="footer-text">Roles - Simplifying Discord role management</p>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>

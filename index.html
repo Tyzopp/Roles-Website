@@ -13,726 +13,176 @@
         }
 
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: #fff;
-            overflow-x: hidden;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            background-color: #0f131b;
+            color: #ffffff;
+            line-height: 1.6;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
         }
 
         .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        header {
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            position: relative;
-            padding: 100px 0;
-        }
-
-        .hero {
-            animation: fadeInUp 1s ease-out;
-            width: 100%;
-        }
-
-        .hero h1 {
-            font-size: clamp(3rem, 8vw, 6rem);
-            font-weight: 700;
-            margin-bottom: 1rem;
-            background: linear-gradient(45deg, #fff, #f0f0f0);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-
-        .hero p {
-            font-size: clamp(1rem, 2.5vw, 1.2rem);
-            opacity: 0.8;
-            max-width: 500px;
-            margin: 0 auto 3rem;
-            line-height: 1.5;
-        }
-
-        .hero-cards {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
             max-width: 800px;
-            margin: 0 auto 3rem;
-        }
-
-        .hero-card {
-            background: rgba(255, 255, 255, 0.05);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            border-radius: 15px;
-            padding: 20px;
-            backdrop-filter: blur(10px);
-            transition: all 0.3s ease;
-            display: flex;
-            flex-direction: column;
-            text-align: center;
-        }
-
-        .hero-card:hover {
-            transform: translateY(-5px);
-            background: rgba(255, 255, 255, 0.1);
-            border-color: rgba(255, 255, 255, 0.2);
-        }
-
-        .hero-card-icon {
-            width: 40px;
-            height: 40px;
-            background: linear-gradient(45deg, #6dd5ed, #2193b0);
-            border-radius: 50%;
-            margin: 0 auto 15px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 18px;
-        }
-
-        .hero-card h3 {
-            font-size: 1.1rem;
-            margin-bottom: 8px;
-            font-weight: 600;
-        }
-
-        .hero-card p {
-            font-size: 0.9rem;
-            opacity: 0.8;
-            line-height: 1.4;
-            margin: 0 0 15px 0;
-        }
-
-        .hero-card-link {
-            display: inline-block;
-            padding: 8px 20px;
-            background: linear-gradient(45deg, #6dd5ed, #2193b0);
-            border-radius: 20px;
-            color: #fff;
-            text-decoration: none;
-            font-size: 0.85rem;
-            font-weight: 600;
-            transition: all 0.3s ease;
-            margin-top: auto;
-        }
-
-        .hero-card-link:hover {
-            background: linear-gradient(45deg, #5bc5db, #1e7a8c);
-            transform: translateY(-2px);
-        }
-
-        .features {
-            padding: 100px 0;
-            background: rgba(0, 0, 0, 0.1);
-            backdrop-filter: blur(20px);
-        }
-
-        .features-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 40px;
-            margin-top: 60px;
-        }
-
-        .feature-card {
-            background: rgba(255, 255, 255, 0.05);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            border-radius: 20px;
-            padding: 40px 30px;
-            text-align: center;
-            transition: all 0.3s ease;
-            backdrop-filter: blur(10px);
-        }
-
-        .feature-card:hover {
-            transform: translateY(-10px);
-            background: rgba(255, 255, 255, 0.1);
-            border-color: rgba(255, 255, 255, 0.2);
-        }
-
-        .feature-icon {
-            width: 60px;
-            height: 60px;
-            background: linear-gradient(45deg, #6dd5ed, #2193b0);
-            border-radius: 50%;
-            margin: 0 auto 20px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 24px;
-        }
-
-        .feature-card h3 {
-            font-size: 1.5rem;
-            margin-bottom: 15px;
-            font-weight: 600;
-        }
-
-        .feature-card p {
-            opacity: 0.8;
-            line-height: 1.6;
-        }
-
-        .section-title {
-            text-align: center;
-            font-size: clamp(2rem, 5vw, 3rem);
-            font-weight: 700;
-            margin-bottom: 20px;
-        }
-
-        .section-subtitle {
-            text-align: center;
-            opacity: 0.8;
-            font-size: 1.2rem;
-            max-width: 600px;
             margin: 0 auto;
+            padding: 0 24px;
         }
 
-        .stats {
-            padding: 80px 0;
+        main {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 120px 0;
+        }
+
+        .hero-section {
+            text-align: center;
+            max-width: 600px;
+        }
+
+        .hero-section h1 {
+            font-size: 64px;
+            font-weight: 700;
+            color: #ffffff;
+            margin-bottom: 24px;
+            letter-spacing: -0.02em;
+        }
+
+        .hero-section p {
+            font-size: 20px;
+            color: #a1a1aa;
+            margin-bottom: 48px;
+            font-weight: 400;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+
+        .btn {
+            background-color: #18181b;
+            border: 1px solid #27272a;
+            color: #ffffff;
+            padding: 16px 32px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 16px;
+            transition: all 0.2s ease;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            min-width: 160px;
             text-align: center;
         }
 
-        .stats-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 40px;
-            margin-top: 60px;
-        }
-
-        .stat-item {
-            animation: fadeInUp 0.6s ease-out;
-        }
-
-        .stat-number {
-            font-size: 3rem;
-            font-weight: 700;
-            color: #6dd5ed;
-            display: block;
-        }
-
-        .stat-label {
-            font-size: 1.1rem;
-            opacity: 0.8;
-            margin-top: 10px;
+        .btn:hover {
+            background-color: #27272a;
+            border-color: #3f3f46;
         }
 
         footer {
-            padding: 60px 0;
-            text-align: center;
-            background: rgba(0, 0, 0, 0.2);
-            backdrop-filter: blur(20px);
+            padding: 40px 0;
+            border-top: 1px solid #18181b;
         }
 
         .footer-content {
-            opacity: 0.8;
+            text-align: center;
         }
 
-        .footer-content a:hover {
-            color: #5bc5db !important;
-            text-decoration: underline !important;
+        .footer-links {
+            margin-bottom: 16px;
         }
 
-        .scroll-indicator {
-            position: absolute;
-            bottom: 30px;
-            left: 50%;
-            transform: translateX(-50%);
-            animation: bounce 2s infinite;
+        .footer-links a {
+            color: #a1a1aa;
+            text-decoration: none;
+            font-size: 14px;
+            margin: 0 16px;
+            transition: color 0.2s ease;
         }
 
-        .scroll-arrow {
-            width: 20px;
-            height: 20px;
-            border: 2px solid #fff;
-            border-top: none;
-            border-left: none;
-            transform: rotate(45deg);
+        .footer-links a:hover {
+            color: #ffffff;
         }
 
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        @keyframes bounce {
-            0%, 20%, 50%, 80%, 100% {
-                transform: translateX(-50%) translateY(0);
-            }
-            40% {
-                transform: translateX(-50%) translateY(-10px);
-            }
-            60% {
-                transform: translateX(-50%) translateY(-5px);
-            }
-        }
-
-        .floating-elements {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            overflow: hidden;
-            pointer-events: none;
-            z-index: 1;
-        }
-
-        .floating-element {
-            position: absolute;
-            background: rgba(255, 255, 255, 0.1);
-            border-radius: 50%;
-            animation: float 6s ease-in-out infinite;
-        }
-
-        .floating-element:nth-child(1) {
-            width: 80px;
-            height: 80px;
-            top: 20%;
-            left: 10%;
-            animation-delay: 0s;
-        }
-
-        .floating-element:nth-child(2) {
-            width: 60px;
-            height: 60px;
-            top: 60%;
-            right: 10%;
-            animation-delay: 2s;
-        }
-
-        .floating-element:nth-child(3) {
-            width: 40px;
-            height: 40px;
-            top: 80%;
-            left: 20%;
-            animation-delay: 4s;
-        }
-
-        .sparkle {
-            position: fixed;
-            width: 4px;
-            height: 4px;
-            background: #fff;
-            border-radius: 50%;
-            pointer-events: none;
-            animation: sparkleLife 1.5s ease-out forwards;
-            z-index: 5;
-        }
-
-        .sparkle::before,
-        .sparkle::after {
-            content: '';
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            width: 8px;
-            height: 1px;
-            background: #fff;
-            transform: translate(-50%, -50%);
-            opacity: 0.8;
-        }
-
-        .sparkle::before {
-            transform: translate(-50%, -50%) rotate(45deg);
-        }
-
-        .sparkle::after {
-            transform: translate(-50%, -50%) rotate(-45deg);
-        }
-
-        .ambient-sparkle {
-            position: absolute;
-            width: 2px;
-            height: 2px;
-            background: rgba(255, 255, 255, 0.6);
-            border-radius: 50%;
-            animation: ambientSparkle 3s ease-in-out infinite;
-        }
-
-        .ambient-sparkle::before {
-            content: '';
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            width: 6px;
-            height: 0.5px;
-            background: rgba(255, 255, 255, 0.4);
-            transform: translate(-50%, -50%) rotate(45deg);
-        }
-
-        .ambient-sparkle::after {
-            content: '';
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            width: 6px;
-            height: 0.5px;
-            background: rgba(255, 255, 255, 0.4);
-            transform: translate(-50%, -50%) rotate(-45deg);
-        }
-
-        @keyframes float {
-            0%, 100% {
-                transform: translateY(0px);
-                opacity: 0.5;
-            }
-            50% {
-                transform: translateY(-20px);
-                opacity: 0.8;
-            }
-        }
-
-        @keyframes sparkleLife {
-            0% {
-                transform: scale(0) rotate(0deg);
-                opacity: 1;
-            }
-            50% {
-                transform: scale(1) rotate(180deg);
-                opacity: 1;
-            }
-            100% {
-                transform: scale(0) rotate(360deg);
-                opacity: 0;
-            }
-        }
-
-        @keyframes ambientSparkle {
-            0%, 100% {
-                opacity: 0;
-                transform: scale(0);
-            }
-            50% {
-                opacity: 1;
-                transform: scale(1);
-            }
+        .footer-text {
+            font-size: 14px;
+            color: #71717a;
         }
 
         @media (max-width: 768px) {
-            .features-grid {
-                grid-template-columns: 1fr;
-                gap: 30px;
+            .container {
+                padding: 0 20px;
             }
-            
-            .stats-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-            
-            .feature-card {
-                padding: 30px 20px;
-            }
-            
-            .hero-cards {
-                grid-template-columns: 1fr;
-                gap: 15px;
-                max-width: 350px;
-            }
-        }
 
-        .fade-in {
-            opacity: 0;
-            transform: translateY(30px);
-            transition: all 0.6s ease;
-        }
+            main {
+                padding: 80px 0;
+            }
 
-        .fade-in.visible {
-            opacity: 1;
-            transform: translateY(0);
+            .hero-section h1 {
+                font-size: 48px;
+            }
+
+            .hero-section p {
+                font-size: 18px;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+                gap: 16px;
+            }
+
+            .btn {
+                width: 100%;
+                max-width: 300px;
+            }
+
+            .footer-links a {
+                display: block;
+                margin: 8px 0;
+            }
         }
     </style>
 </head>
 <body>
-    <div class="floating-elements">
-        <div class="floating-element"></div>
-        <div class="floating-element"></div>
-        <div class="floating-element"></div>
-    </div>
-
-    <header>
+    <main>
         <div class="container">
-            <div class="hero">
+            <div class="hero-section">
                 <h1>Roles</h1>
-                <p>Automate Discord role management with precision.</p>
+                <p>Automate Discord role management with precision</p>
                 
-                <div class="hero-cards">
-                    <div class="hero-card fade-in">
-                        <div class="hero-card-icon">🚀</div>
-                        <h3>Add to Server</h3>
-                        <p>Get started with our bot</p>
-                        <a href="https://discord.com/oauth2/authorize?client_id=1352791729698377858" target="_blank" class="hero-card-link">Invite Now</a>
-                    </div>
-                    <div class="hero-card fade-in">
-                        <div class="hero-card-icon">💬</div>
-                        <h3>Support Server</h3>
-                        <p>Join our community for help</p>
-                        <a href="https://discord.gg/Wc3tTz5UzW" target="_blank" class="hero-card-link">Join Discord</a>
-                    </div>
-                    <div class="hero-card fade-in">
-                        <div class="hero-card-icon">📊</div>
-                        <h3>Status</h3>
-                        <p>Check our service status</p>
-                        <a href="https://status.roles.website/" target="_blank" class="hero-card-link">View Status</a>
-                    </div>
+                <div class="cta-buttons">
+                    <a href="https://discord.com/oauth2/authorize?client_id=1352791729698377858" target="_blank" class="btn">
+                        Add to Server
+                    </a>
+                    <a href="https://discord.gg/Wc3tTz5UzW" target="_blank" class="btn">
+                        Support Server
+                    </a>
+                    <a href="https://status.roles.website/" target="_blank" class="btn">
+                        Status
+                    </a>
                 </div>
             </div>
         </div>
-        <div class="scroll-indicator">
-            <div class="scroll-arrow"></div>
-        </div>
-    </header>
-
-    <section class="features" id="features">
-        <div class="container">
-            <div class="fade-in">
-                <h2 class="section-title">Powerful Features</h2>
-                <p class="section-subtitle">Everything you need to manage roles efficiently and automatically</p>
-            </div>
-            
-            <div class="features-grid">
-                <div class="feature-card fade-in">
-                    <div class="feature-icon">⚡</div>
-                    <h3>Auto Roles</h3>
-                    <p>Automatically assign roles to new members when they join your server. Configure multiple roles with bot inclusion options.</p>
-                </div>
-                
-                <div class="feature-card fade-in">
-                    <div class="feature-icon">🎭</div>
-                    <h3>Reaction Roles</h3>
-                    <p>Let users assign themselves roles by reacting to messages. Support for multiple modes: toggle, add-only, remove-only, and reverse.</p>
-                </div>
-                
-                <div class="feature-card fade-in">
-                    <div class="feature-icon">📌</div>
-                    <h3>Sticky Roles</h3>
-                    <p>Re-apply roles to users who had them before leaving the server. Perfect for maintaining member status and permissions.</p>
-                </div>
-                
-                <div class="feature-card fade-in">
-                    <div class="feature-icon">📋</div>
-                    <h3>Easy Management</h3>
-                    <p>List all configurations, remove specific settings, or reset everything. Clean and intuitive command interface.</p>
-                </div>
-                
-                <div class="feature-card fade-in">
-                    <div class="feature-icon">🛡️</div>
-                    <h3>Permission Safe</h3>
-                    <p>Built-in permission checks and role hierarchy validation. Your server security is our priority.</p>
-                </div>
-                
-                <div class="feature-card fade-in">
-                    <div class="feature-icon">⚙️</div>
-                    <h3>Highly Configurable</h3>
-                    <p>Customize bot behavior, include or exclude bots, set limits, and fine-tune every aspect of role management.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="stats" id="stats">
-        <div class="container">
-            <div class="fade-in">
-                <h2 class="section-title">Built for Scale</h2>
-                <p class="section-subtitle">Trusted by communities worldwide</p>
-            </div>
-            
-            <div class="stats-grid">
-                <div class="stat-item fade-in">
-                    <span class="stat-number">10</span>
-                    <div class="stat-label">Auto Roles</div>
-                </div>
-                
-                <div class="stat-item fade-in">
-                    <span class="stat-number">50</span>
-                    <div class="stat-label">Reaction Roles</div>
-                </div>
-                
-                <div class="stat-item fade-in">
-                    <span class="stat-number">10</span>
-                    <div class="stat-label">Sticky Roles</div>
-                </div>
-            </div>
-        </div>
-    </section>
+    </main>
 
     <footer>
         <div class="container">
             <div class="footer-content">
-                <p>Roles - Simplifying Discord role management.</p>
-                <p style="margin-top: 15px; font-size: 0.9rem; opacity: 0.6;">
-                    <a href="terms/" style="color: #6dd5ed; text-decoration: none; transition: color 0.3s ease;">Terms of Service</a>
-                    <span style="margin: 0 10px; opacity: 0.4;">|</span>
-                    <a href="privacy/" style="color: #6dd5ed; text-decoration: none; transition: color 0.3s ease;">Privacy Policy</a>
-                </p>
+                <div class="footer-links">
+                    <a href="terms/">Terms of Service</a>
+                    <a href="privacy/">Privacy Policy</a>
+                </div>
+                <p class="footer-text">Roles - Simplifying Discord role management</p>
             </div>
         </div>
     </footer>
-
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const observerOptions = {
-                threshold: 0.2,
-                rootMargin: '0px 0px -100px 0px'
-            };
-
-            const observer = new IntersectionObserver(function(entries) {
-                entries.forEach(function(entry) {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('visible');
-                        observer.unobserve(entry.target);
-                    }
-                });
-            }, observerOptions);
-
-            const fadeElements = document.querySelectorAll('.fade-in');
-            const heroCards = document.querySelectorAll('.hero-card');
-            
-            fadeElements.forEach(function(element) {
-                observer.observe(element);
-            });
-            
-            heroCards.forEach(function(card, index) {
-                card.style.transitionDelay = (index * 0.2) + 's';
-            });
-
-            document.querySelectorAll('a[href^="#"]').forEach(function(anchor) {
-                anchor.addEventListener('click', function(e) {
-                    e.preventDefault();
-                    const target = document.querySelector(this.getAttribute('href'));
-                    if (target) {
-                        target.scrollIntoView({
-                            behavior: 'smooth',
-                            block: 'start'
-                        });
-                    }
-                });
-            });
-
-            const statNumbers = document.querySelectorAll('.stat-number');
-            const animateStats = function() {
-                statNumbers.forEach(function(stat) {
-                    const target = parseInt(stat.textContent);
-                    const increment = target / 60;
-                    let current = 0;
-                    
-                    const timer = setInterval(function() {
-                        current += increment;
-                        if (current >= target) {
-                            current = target;
-                            clearInterval(timer);
-                        }
-                        stat.textContent = Math.floor(current);
-                    }, 30);
-                });
-            };
-
-            const statsSection = document.querySelector('.stats');
-            const statsObserver = new IntersectionObserver(function(entries) {
-                entries.forEach(function(entry) {
-                    if (entry.isIntersecting) {
-                        animateStats();
-                        statsObserver.unobserve(entry.target);
-                    }
-                });
-            }, { threshold: 0.5 });
-
-            statsObserver.observe(statsSection);
-
-            let lastScrollY = window.scrollY;
-            let mouseX = window.innerWidth / 2;
-            let mouseY = window.innerHeight / 2;
-
-            document.addEventListener('mousemove', function(e) {
-                mouseX = e.clientX;
-                mouseY = e.clientY;
-                
-                if (Math.random() < 0.05) {
-                    createSparkle(mouseX, mouseY);
-                }
-            });
-
-            window.addEventListener('scroll', function() {
-                const currentScrollY = window.scrollY;
-                const scrollDelta = Math.abs(currentScrollY - lastScrollY);
-                
-                if (scrollDelta > 5) {
-                    const sparkleCount = Math.min(Math.floor(scrollDelta / 10), 3);
-                    for (let i = 0; i < sparkleCount; i++) {
-                        setTimeout(function() {
-                            createSparkle(
-                                Math.random() * window.innerWidth,
-                                Math.random() * window.innerHeight
-                            );
-                        }, i * 50);
-                    }
-                }
-                
-                lastScrollY = currentScrollY;
-            });
-
-            function createSparkle(x, y) {
-                const sparkle = document.createElement('div');
-                sparkle.className = 'sparkle';
-                sparkle.style.left = (x + (Math.random() - 0.5) * 50) + 'px';
-                sparkle.style.top = (y + (Math.random() - 0.5) * 50) + 'px';
-                
-                document.body.appendChild(sparkle);
-                
-                setTimeout(function() {
-                    sparkle.remove();
-                }, 1500);
-            }
-
-            function createAmbientSparkles() {
-                for (let i = 0; i < 5; i++) {
-                    setTimeout(function() {
-                        const sparkle = document.createElement('div');
-                        sparkle.className = 'ambient-sparkle';
-                        sparkle.style.left = Math.random() * window.innerWidth + 'px';
-                        sparkle.style.top = Math.random() * window.innerHeight + 'px';
-                        sparkle.style.animationDelay = Math.random() * 3 + 's';
-                        
-                        document.querySelector('.floating-elements').appendChild(sparkle);
-                        
-                        setTimeout(function() {
-                            sparkle.remove();
-                        }, 6000);
-                    }, i * 100);
-                }
-            }
-
-            setInterval(createAmbientSparkles, 300);
-
-            for (let i = 0; i < 25; i++) {
-                setTimeout(createAmbientSparkles, i * 80);
-            }
-
-            const cards = document.querySelectorAll('.hero-card, .feature-card');
-            cards.forEach(function(card) {
-                card.addEventListener('mouseenter', function() {
-                    for (let i = 0; i < 3; i++) {
-                        setTimeout(function() {
-                            const rect = card.getBoundingClientRect();
-                            const x = rect.left + Math.random() * rect.width;
-                            const y = rect.top + Math.random() * rect.height;
-                            createSparkle(x, y);
-                        }, i * 100);
-                    }
-                });
-            });
-        });
-    </script>
 </body>
 </html>
