@@ -12,8 +12,7 @@
             box-sizing: border-box;
         }
 
-        html, body {
-            width: 100%;
+        html {
             overflow-x: hidden;
         }
 
@@ -25,6 +24,7 @@
             min-height: 100vh;
             display: flex;
             flex-direction: column;
+            overflow-x: hidden;
         }
 
         .navbar {
@@ -35,7 +35,6 @@
             right: 0;
             z-index: 1000;
             height: 56px;
-            width: 100%;
         }
 
         .navbar-container {
@@ -46,7 +45,6 @@
             display: flex;
             align-items: center;
             justify-content: space-between;
-            width: 100%;
         }
 
         .navbar-logo {
@@ -110,13 +108,11 @@
             max-width: 800px;
             margin: 0 auto;
             padding: 0 24px;
-            width: 100%;
         }
 
         main {
             flex: 1;
             padding: 120px 0 60px;
-            width: 100%;
         }
 
         .page-header {
@@ -268,7 +264,6 @@
                 flex-direction: column;
                 gap: 0;
                 padding: 16px 0;
-                width: 100%;
             }
 
             .navbar-nav.show {
