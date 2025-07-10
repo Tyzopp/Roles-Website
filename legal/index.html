@@ -113,6 +113,9 @@
         .page-header {
             text-align: center;
             margin-bottom: 60px;
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeInUp 0.8s ease-out 0.2s forwards;
         }
 
         .page-title {
@@ -135,6 +138,21 @@
             border-radius: 12px;
             padding: 40px;
             margin-bottom: 32px;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 0.6s ease-out forwards;
+        }
+
+        .content-section:nth-child(2) {
+            animation-delay: 0.4s;
+        }
+
+        .content-section:nth-child(3) {
+            animation-delay: 0.6s;
+        }
+
+        .content-section:nth-child(4) {
+            animation-delay: 0.8s;
         }
 
         .content-section h2 {
@@ -166,6 +184,9 @@
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 24px;
             margin: 40px 0;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 0.6s ease-out 0.6s forwards;
         }
 
         .legal-card {
@@ -208,6 +229,19 @@
         .highlight p {
             color: #e5e7eb;
             margin: 0;
+        }
+
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+            }
         }
 
         @media (max-width: 768px) {

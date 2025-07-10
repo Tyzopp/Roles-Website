@@ -113,6 +113,9 @@
         .page-header {
             text-align: center;
             margin-bottom: 60px;
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeInUp 0.8s ease-out 0.2s forwards;
         }
 
         .page-title {
@@ -135,6 +138,25 @@
             border-radius: 12px;
             padding: 40px;
             margin-bottom: 32px;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 0.6s ease-out forwards;
+        }
+
+        .content-section:nth-child(2) {
+            animation-delay: 0.4s;
+        }
+
+        .content-section:nth-child(3) {
+            animation-delay: 0.6s;
+        }
+
+        .content-section:nth-child(4) {
+            animation-delay: 0.8s;
+        }
+
+        .content-section:nth-child(5) {
+            animation-delay: 1s;
         }
 
         .content-section h2 {
@@ -185,6 +207,19 @@
         .feature-card p {
             color: #9ca3af;
             font-size: 14px;
+        }
+
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+            }
         }
 
         @media (max-width: 768px) {
@@ -295,23 +330,12 @@
             </section>
 
             <section class="content-section">
-                <h2>Why Choose Roles?</h2>
-                <ul>
-                    <li><strong>Reliability:</strong> Built with robust infrastructure to ensure 99.9% uptime and consistent performance</li>
-                    <li><strong>User-Friendly:</strong> Intuitive commands and clear documentation make setup and management simple</li>
-                    <li><strong>Scalable:</strong> Handles servers of any size, from small communities to enterprise-level Discord servers</li>
-                    <li><strong>Secure:</strong> Follows Discord's best practices and implements security measures to protect your server</li>
-                    <li><strong>Active Support:</strong> Dedicated support team and community ready to help with any questions</li>
-                </ul>
-            </section>
-
-            <section class="content-section">
                 <h2>Getting Started</h2>
                 <p>Ready to transform your Discord server management? Adding Roles to your server takes just a few clicks:</p>
                 <ul>
                     <li>Click "Add to Server" and select your Discord server</li>
                     <li>Grant the necessary permissions for Roles to function properly</li>
-                    <li>Run the setup command to configure your preferences</li>
+                    <li>Configure your preferred role management settings using our slash commands</li>
                     <li>Start enjoying automated, efficient role management</li>
                 </ul>
                 <p>Need help getting started? Join our support server where our community and team are ready to assist you every step of the way.</p>
