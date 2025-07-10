@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Privacy Policy - Roles Discord Bot</title>
+    <title>Privacy Policy - Roles</title>
     <link rel="icon" type="image/x-icon" href="../assets/favicon.ico">
     <style>
         * {
@@ -22,6 +22,83 @@
             flex-direction: column;
         }
 
+        .navbar {
+            background-color: #0f131b;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            height: 56px;
+        }
+
+        .navbar-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 32px;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .navbar-logo {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            color: #ffffff;
+            cursor: pointer;
+        }
+
+        .navbar-logo img {
+            width: 24px;
+            height: 24px;
+            transition: opacity 0.2s ease;
+        }
+
+        .navbar-logo:hover img {
+            opacity: 0.8;
+        }
+
+        .navbar-nav {
+            display: flex;
+            list-style: none;
+            gap: 48px;
+        }
+
+        .navbar-nav li {
+            margin: 0;
+        }
+
+        .navbar-nav a {
+            display: block;
+            padding: 8px 0;
+            color: #9ca3af;
+            text-decoration: none;
+            font-size: 15px;
+            font-weight: 400;
+            transition: color 0.2s ease;
+        }
+
+        .navbar-nav a:hover,
+        .navbar-nav a.active {
+            color: #ffffff;
+        }
+
+        .navbar-right {
+            display: none;
+        }
+
+        .mobile-menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            color: #ffffff;
+            font-size: 20px;
+            cursor: pointer;
+            padding: 8px;
+        }
+
         .container {
             max-width: 800px;
             margin: 0 auto;
@@ -29,7 +106,7 @@
         }
 
         header {
-            padding: 80px 0 40px;
+            padding: 120px 0 40px;
             text-align: center;
         }
 
@@ -45,24 +122,6 @@
             font-size: 18px;
             color: #a1a1aa;
             margin-bottom: 32px;
-        }
-
-        .back-link {
-            display: inline-block;
-            color: #a1a1aa;
-            text-decoration: none;
-            font-size: 14px;
-            margin-bottom: 24px;
-            transition: color 0.2s ease;
-            padding: 8px 16px;
-            border: 1px solid #27272a;
-            border-radius: 6px;
-            background-color: #18181b;
-        }
-
-        .back-link:hover {
-            color: #ffffff;
-            border-color: #3f3f46;
         }
 
         main {
@@ -116,43 +175,41 @@
             opacity: 0.8;
         }
 
-        footer {
-            padding: 40px 0;
-            border-top: 1px solid #18181b;
-        }
-
-        .footer-content {
-            text-align: center;
-        }
-
-        .footer-links {
-            margin-bottom: 16px;
-        }
-
-        .footer-links a {
-            color: #a1a1aa;
-            text-decoration: none;
-            font-size: 14px;
-            margin: 0 16px;
-            transition: color 0.2s ease;
-        }
-
-        .footer-links a:hover {
-            color: #ffffff;
-        }
-
-        .footer-text {
-            font-size: 14px;
-            color: #71717a;
-        }
-
         @media (max-width: 768px) {
+            .navbar-container {
+                padding: 0 20px;
+            }
+
+            .navbar-nav {
+                display: none;
+                position: absolute;
+                top: 56px;
+                left: 0;
+                right: 0;
+                background-color: #0f131b;
+                flex-direction: column;
+                gap: 0;
+                padding: 16px 0;
+            }
+
+            .navbar-nav.show {
+                display: flex;
+            }
+
+            .navbar-nav a {
+                padding: 12px 32px;
+            }
+
+            .mobile-menu-toggle {
+                display: block;
+            }
+
             .container {
                 padding: 0 20px;
             }
 
             header {
-                padding: 60px 0 30px;
+                padding: 100px 0 30px;
             }
 
             .page-title {
@@ -170,18 +227,28 @@
             .legal-section h3 {
                 font-size: 18px;
             }
-
-            .footer-links a {
-                display: block;
-                margin: 8px 0;
-            }
         }
     </style>
 </head>
 <body>
+    <nav class="navbar">
+        <div class="navbar-container">
+            <a href="../" class="navbar-logo">
+                <img src="../assets/favicon.ico" alt="Roles Logo">
+            </a>
+            
+            <ul class="navbar-nav">
+                <li><a href="../about/">About</a></li>
+                <li><a href="https://status.roles.website/" target="_blank">Status</a></li>
+                <li><a href="../legal/">Legal</a></li>
+            </ul>
+
+            <button class="mobile-menu-toggle" onclick="toggleMobileMenu()">☰</button>
+        </div>
+    </nav>
+
     <header>
         <div class="container">
-            <a href="../" class="back-link">← Back to Home</a>
             <h1 class="page-title">Privacy Policy</h1>
             <p class="page-subtitle">How we handle your data when using Roles Bot</p>
         </div>
@@ -233,16 +300,20 @@
         </div>
     </main>
 
-    <footer>
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-links">
-                    <a href="../terms/">Terms of Service</a>
-                    <a href="../privacy/">Privacy Policy</a>
-                </div>
-                <p class="footer-text">Roles - Simplifying Discord role management</p>
-            </div>
-        </div>
-    </footer>
+    <script>
+        function toggleMobileMenu() {
+            const nav = document.querySelector('.navbar-nav');
+            nav.classList.toggle('show');
+        }
+
+        document.addEventListener('click', function(event) {
+            const nav = document.querySelector('.navbar-nav');
+            const toggle = document.querySelector('.mobile-menu-toggle');
+            
+            if (!nav.contains(event.target) && !toggle.contains(event.target)) {
+                nav.classList.remove('show');
+            }
+        });
+    </script>
 </body>
 </html>

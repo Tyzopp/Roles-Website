@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Roles</title>
-    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+    <title>Legal - Roles</title>
+    <link rel="icon" type="image/x-icon" href="../assets/favicon.ico">
     <style>
         * {
             margin: 0;
@@ -60,10 +60,6 @@
             opacity: 0.8;
         }
 
-        .navbar-brand {
-            display: none;
-        }
-
         .navbar-nav {
             display: flex;
             list-style: none;
@@ -111,121 +107,107 @@
 
         main {
             flex: 1;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 176px 0 60px;
+            padding: 120px 0 60px;
         }
 
-        .hero-section {
+        .page-header {
             text-align: center;
-            max-width: 600px;
-            opacity: 0;
-            transform: translateY(30px);
-            animation: fadeInUp 0.8s ease-out 0.2s forwards;
+            margin-bottom: 60px;
         }
 
-        .hero-section h1 {
-            font-size: 64px;
+        .page-title {
+            font-size: 48px;
             font-weight: 700;
             color: #ffffff;
-            margin-bottom: 24px;
+            margin-bottom: 16px;
             letter-spacing: -0.02em;
         }
 
-        .hero-section p {
+        .page-subtitle {
             font-size: 20px;
             color: #a1a1aa;
-            margin-bottom: 48px;
-            font-weight: 400;
+            margin-bottom: 32px;
         }
 
-        .cta-buttons {
-            display: flex;
-            gap: 20px;
-            justify-content: center;
-            flex-wrap: wrap;
-            align-items: center;
+        .content-section {
+            background-color: #111827;
+            border: 1px solid #1f2937;
+            border-radius: 12px;
+            padding: 40px;
+            margin-bottom: 32px;
         }
 
-        .btn {
-            background-color: #18181b;
-            border: 1px solid #27272a;
+        .content-section h2 {
+            font-size: 24px;
+            font-weight: 600;
             color: #ffffff;
-            padding: 16px 32px;
-            border-radius: 8px;
-            text-decoration: none;
-            font-weight: 500;
+            margin-bottom: 20px;
+        }
+
+        .content-section p {
+            color: #d1d5db;
+            margin-bottom: 16px;
             font-size: 16px;
-            transition: all 0.3s ease;
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            min-width: 160px;
+        }
+
+        .content-section ul {
+            margin: 20px 0;
+            padding-left: 20px;
+        }
+
+        .content-section li {
+            color: #d1d5db;
+            margin-bottom: 12px;
+            font-size: 16px;
+        }
+
+        .legal-links {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 24px;
+            margin: 40px 0;
+        }
+
+        .legal-card {
+            background-color: #111827;
+            border: 1px solid #1f2937;
+            border-radius: 8px;
+            padding: 32px;
             text-align: center;
-            opacity: 0;
-            transform: translateY(20px);
-            animation: fadeInUp 0.6s ease-out forwards;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            color: inherit;
         }
 
-        .btn:nth-child(1) {
-            animation-delay: 0.6s;
-        }
-
-        .btn:nth-child(2) {
-            animation-delay: 0.8s;
-        }
-
-        .btn:hover {
-            background-color: #27272a;
-            border-color: #3f3f46;
+        .legal-card:hover {
+            border-color: #374151;
             transform: translateY(-2px);
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
         }
 
-        footer {
-            padding: 40px 0;
-            border-top: 1px solid #18181b;
-            opacity: 0;
-            animation: fadeIn 0.6s ease-out 1.2s forwards;
-        }
-
-        @keyframes fadeInUp {
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        @keyframes fadeIn {
-            to {
-                opacity: 1;
-            }
-        }
-
-        .footer-content {
-            text-align: center;
-        }
-
-        .footer-links {
-            margin-bottom: 16px;
-        }
-
-        .footer-links a {
-            color: #a1a1aa;
-            text-decoration: none;
-            font-size: 14px;
-            margin: 0 16px;
-            transition: color 0.2s ease;
-        }
-
-        .footer-links a:hover {
+        .legal-card h3 {
+            font-size: 20px;
+            font-weight: 600;
             color: #ffffff;
+            margin-bottom: 12px;
         }
 
-        .footer-text {
+        .legal-card p {
+            color: #9ca3af;
             font-size: 14px;
-            color: #71717a;
+        }
+
+        .highlight {
+            background-color: #1f2937;
+            border-left: 4px solid #3b82f6;
+            padding: 20px;
+            margin: 24px 0;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .highlight p {
+            color: #e5e7eb;
+            margin: 0;
         }
 
         @media (max-width: 768px) {
@@ -262,26 +244,23 @@
             }
 
             main {
-                padding: 136px 0 80px;
+                padding: 100px 0 40px;
             }
 
-            .hero-section h1 {
-                font-size: 48px;
+            .page-title {
+                font-size: 36px;
             }
 
-            .hero-section p {
+            .page-subtitle {
                 font-size: 18px;
             }
 
-            .cta-buttons {
-                flex-direction: column;
-                align-items: center;
-                gap: 16px;
+            .content-section {
+                padding: 32px 24px;
             }
 
-            .btn {
-                width: 100%;
-                max-width: 300px;
+            .legal-links {
+                grid-template-columns: 1fr;
             }
         }
     </style>
@@ -289,14 +268,14 @@
 <body>
     <nav class="navbar">
         <div class="navbar-container">
-            <a href="/" class="navbar-logo">
-                <img src="assets/favicon.ico" alt="Roles Logo">
+            <a href="../" class="navbar-logo">
+                <img src="../assets/favicon.ico" alt="Roles Logo">
             </a>
             
             <ul class="navbar-nav">
-                <li><a href="about/">About</a></li>
+                <li><a href="../about/">About</a></li>
                 <li><a href="https://status.roles.website/" target="_blank">Status</a></li>
-                <li><a href="legal/">Legal</a></li>
+                <li><a href="../legal/" class="active">Legal</a></li>
             </ul>
 
             <button class="mobile-menu-toggle" onclick="toggleMobileMenu()">☰</button>
@@ -305,19 +284,34 @@
 
     <main>
         <div class="container">
-            <div class="hero-section">
-                <h1>Roles</h1>
-                <p>Automate Discord role management with precision</p>
+            <header class="page-header">
+                <h1 class="page-title">Legal Information</h1>
+                <p class="page-subtitle">Important legal aspects when using Roles bot</p>
+            </header>
+
+            <section class="content-section">
+                <h2>Legal Documentation</h2>
+                <p>Our legal documentation outlines the terms, conditions, and privacy practices governing the use of Roles bot. These documents ensure transparency and establish clear guidelines for both users and service providers.</p>
+                <p>Please review these documents to understand your rights and responsibilities when using our service.</p>
+            </section>
+
+            <div class="legal-links">
+                <a href="../terms/" class="legal-card">
+                    <h3>Terms of Service</h3>
+                    <p>Read our complete terms of service outlining the rules and guidelines for using Roles bot in your Discord server.</p>
+                </a>
                 
-                <div class="cta-buttons">
-                    <a href="https://discord.com/oauth2/authorize?client_id=1352791729698377858" target="_blank" class="btn">
-                        Add to Server
-                    </a>
-                    <a href="https://discord.gg/Wc3tTz5UzW" target="_blank" class="btn">
-                        Support Server
-                    </a>
-                </div>
+                <a href="../privacy/" class="legal-card">
+                    <h3>Privacy Policy</h3>
+                    <p>Learn about how we collect, use, and protect your data when you use Roles bot and related services.</p>
+                </a>
             </div>
+
+            <section class="content-section">
+                <h2>Questions or Concerns?</h2>
+                <p>If you have any legal questions, concerns about data handling, or need clarification about our terms and policies, please don't hesitate to reach out to our support team through our Discord server.</p>
+                <p>We're committed to transparency and ensuring that you feel confident and informed when using Roles bot in your community.</p>
+            </section>
         </div>
     </main>
 
