@@ -187,20 +187,35 @@
 
         .feature-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: repeat(2, 1fr);
             gap: 24px;
             margin: 40px 0;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 0.6s ease-out 0.6s forwards;
         }
 
         .feature-card {
             background-color: #201c24;
-            border: 1px solid #2a252e;
+            border: 1px solid #201c24;
             border-radius: 8px;
-            padding: 24px;
+            padding: 32px;
+            text-align: center;
+            transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            min-height: 160px;
+        }
+
+        .feature-card:hover {
+            border-color: #2a252e;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
         }
 
         .feature-card h3 {
-            font-size: 18px;
+            font-size: 20px;
             font-weight: 600;
             color: #ffffff;
             margin-bottom: 12px;
@@ -309,27 +324,24 @@
                 <p>Built with precision and reliability in mind, Roles offers a comprehensive set of features that make Discord server administration effortless and intuitive.</p>
             </section>
 
-            <section class="content-section">
-                <h2>Key Features</h2>
-                <div class="feature-grid">
-                    <div class="feature-card">
-                        <h3>Auto Roles</h3>
-                        <p>Automatically assign up to 10 roles to new members when they join your server. Configure whether to include or exclude bots from receiving these roles.</p>
-                    </div>
-                    <div class="feature-card">
-                        <h3>Reaction Roles</h3>
-                        <p>Set up interactive reaction roles on any message with up to 50 configurations per server. Choose from toggle, add-only, remove-only, or reverse modes for flexible role management.</p>
-                    </div>
-                    <div class="feature-card">
-                        <h3>Sticky Roles</h3>
-                        <p>Automatically re-assign up to 10 roles to users who previously had them when they rejoin your server. User data is safely stored for 14 days after leaving.</p>
-                    </div>
-                    <div class="feature-card">
-                        <h3>Configuration Management</h3>
-                        <p>Easily view all your role configurations with detailed listings and remove specific settings or reset everything when needed. Full control over your server's role automation.</p>
-                    </div>
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <h3>Auto Roles</h3>
+                    <p>Automatically assign up to 10 roles to new members when they join your server. Configure whether to include or exclude bots from receiving these roles.</p>
                 </div>
-            </section>
+                <div class="feature-card">
+                    <h3>Reaction Roles</h3>
+                    <p>Set up interactive reaction roles on any message with up to 50 configurations per server. Choose from toggle, add-only, remove-only, or reverse modes.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>Sticky Roles</h3>
+                    <p>Automatically re-assign up to 10 roles to users who previously had them when they rejoin your server. User data is safely stored for 14 days after leaving.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>Configuration Management</h3>
+                    <p>Easily view all your role configurations with detailed listings and remove specific settings or reset everything when needed. Full control over your server's role automation.</p>
+                </div>
+            </div>
 
             <section class="content-section">
                 <h2>Getting Started</h2>
